@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IdolOS β - アイドルのためのAIマネージャー</title>
+    <meta
+      name="description"
+      content="SNS・ライブ・チェキ・生誕祭・MC・パフォーマンス改善まで。アイドル活動の悩みをAIが一緒に整理します。"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="IdolOS">
+      <a class="brand" href="#top" aria-label="IdolOS ホーム">
+        <span class="brand-mark"></span>
+        <span>IdolOS</span>
+        <em>β</em>
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="eyebrow"><span></span>β版 公開中・地下アイドルのための毎日の相棒</div>
+        <h1>アイドルのための<span>AIマネージャー</span></h1>
+        <p class="lead">SNS・ライブ・チェキ・生誕祭・MC・パフォーマンス改善まで。<br />アイドル活動の悩みを、AIが一緒に整理します。</p>
+        <div class="hero-actions" aria-label="主要機能">
+          <a class="button button-primary" href="#manager"><span>☰</span>AI Managerを使う</a>
+          <a class="button" href="#academy"><span>✥</span>AI Academyを使う</a>
+          <a class="button" href="#coach"><span>▣</span>Performance Coachを使う</a>
+        </div>
+      </section>
+
+      <section class="feature-grid section-shell" aria-label="できること">
+        <article class="feature-card manager-card">
+          <div class="feature-top"><span class="icon">☰</span><small>作る</small></div>
+          <h2>AI Manager</h2>
+          <p>今日の予定や告知を入れるだけで、複数SNS向けの文章と企画をまとめます。</p>
+          <ul>
+            <li>X / Instagram / TikTok</li>
+            <li>チェキ誘導文</li>
+            <li>ひとことMC</li>
+          </ul>
+          <a href="#manager">使ってみる <span>→</span></a>
+        </article>
+        <article class="feature-card academy-card">
+          <div class="feature-top"><span class="icon">✥</span><small>相談する</small></div>
+          <h2>AI Academy</h2>
+          <p>活動の悩みを、課題・良い点・改善点・次の一歩に分けて整理します。</p>
+          <ul>
+            <li>今の課題と良い点</li>
+            <li>改善点と次の一歩</li>
+            <li>そのまま使える文章例</li>
+          </ul>
+          <a href="#academy">使ってみる <span>→</span></a>
+        </article>
+        <article class="feature-card coach-card">
+          <div class="feature-top"><span class="icon">▣</span><small>磨く</small></div>
+          <h2>Performance Coach</h2>
+          <p>ライブの振り返りから、表情・視線・動き・MCの改善点を提案します。</p>
+          <ul>
+            <li>表情・視線・動きの改善</li>
+            <li>MCの改善</li>
+            <li>次回意識すること3つ</li>
+          </ul>
+          <a href="#coach">使ってみる <span>→</span></a>
+        </article>
+      </section>
+
+      <section class="pricing section-shell" aria-labelledby="pricing-title">
+        <h2 id="pricing-title">シンプルな料金</h2>
+        <p>いつでも変更・解約できます。まずは無料から。</p>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <h3>Free</h3>
+            <strong>¥0</strong>
+            <span>1日3回まで</span>
+            <ul><li>AI Manager</li><li>基本テンプレート</li></ul>
+          </article>
+          <article class="price-card popular">
+            <div class="badge">いちばん人気</div>
+            <h3>Pro</h3>
+            <strong>¥980</strong>
+            <span>毎日使う人に</span>
+            <ul><li>AI Manager 使い放題</li><li>AI Academy 使い放題</li><li>履歴保存</li></ul>
+          </article>
+          <article class="price-card">
+            <h3>Premium</h3>
+            <strong>¥2,980</strong>
+            <span>パフォーマンスまで</span>
+            <ul><li>Pro のすべて</li><li>Performance Coach</li><li>月次振り返り</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="manager" class="tool-panel section-shell" aria-labelledby="manager-title">
+        <span class="pill manager-pill">☰ AI Manager</span>
+        <h2 id="manager-title">投稿をつくる</h2>
+        <p>今日の内容を書くだけで、X・Instagram・TikTok・チェキ誘導・MCをまとめて作成します。</p>
+        <form class="tool-form" data-tool="manager">
+          <div class="field-row">
+            <label>グループ名 <small>任意</small><input name="group" placeholder="例：星屑キャンディ" /></label>
+            <label>アイドル名 <small>任意</small><input name="idol" placeholder="例：みお" /></label>
+          </div>
+          <label>今日の内容 <button type="button" class="example" data-example="manager">✧ 入力例を見る</button><textarea name="content" placeholder="例：6月15日に渋谷でライブがあります。新規の人にも来てほしいです。" required></textarea></label>
+          <button class="button button-primary submit-button" type="submit">作成する</button>
+        </form>
+        <div class="results" id="manager-results" aria-live="polite"></div>
+      </section>
+
+      <section id="academy" class="tool-panel section-shell" aria-labelledby="academy-title">
+        <span class="pill academy-pill">✥ AI Academy</span>
+        <h2 id="academy-title">AIに相談する</h2>
+        <p>活動の悩みを書くと、今の課題・良い点・改善点・次の一歩・そのまま使える文章例を返します。</p>
+        <form class="tool-form" data-tool="academy">
+          <fieldset class="chips">
+            <legend>相談カテゴリ</legend>
+            <label><input type="radio" name="category" value="SNS添削" checked />SNS添削</label>
+            <label><input type="radio" name="category" value="MC添削" />MC添削</label>
+            <label><input type="radio" name="category" value="ファン対応" />ファン対応</label>
+            <label><input type="radio" name="category" value="チェキ相談" />チェキ相談</label>
+            <label><input type="radio" name="category" value="生誕祭相談" />生誕祭相談</label>
+            <label><input type="radio" name="category" value="モチベーション相談" />モチベーション相談</label>
+          </fieldset>
+          <label>相談内容 <button type="button" class="example" data-example="academy">✧ 入力例を見る</button><textarea name="content" placeholder="ライブ後の投稿がいつも同じになってしまいます。もっとファンが反応したくなる投稿にしたいです。" required></textarea></label>
+          <button class="button button-primary submit-button" type="submit">相談する</button>
+        </form>
+        <div class="results" id="academy-results" aria-live="polite"></div>
+      </section>
+
+      <section id="coach" class="tool-panel section-shell" aria-labelledby="coach-title">
+        <span class="pill coach-pill">▣ Performance Coach</span>
+        <h2 id="coach-title">パフォーマンスを診断する</h2>
+        <p>ライブの振り返りを書くと、表情・視線・動き・MCの改善点と、次回意識すること3つを提案します。</p>
+        <form class="tool-form" data-tool="coach">
+          <label>ライブ動画URL <small>任意</small><input name="url" placeholder="例：https://youtu.be/...（任意）" /></label>
+          <label>ライブの振り返り内容 <small>動画がなくてもOK</small><button type="button" class="example" data-example="coach">✧ 入力例を見る</button><textarea name="content" placeholder="ライブ中に表情が硬いと言われます。客席を見るのも苦手です。もっとステージで目立ちたいです。" required></textarea></label>
+          <button class="button button-primary submit-button" type="submit">診断する</button>
+        </form>
+        <div class="results" id="coach-results" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="footer">© 2026 IdolOS β</footer>
+    <script src="main.js"></script>
+  </body>
+</html>
